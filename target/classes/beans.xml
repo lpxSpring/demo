@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="user" class="com.example.test.ioc.bean.User" />
+    <bean id="userDao" class="com.example.test.ioc.dao.impl.UserDaoImpl" />
+    <bean id="userService" class="com.example.test.ioc.service.UserService">
+        <property name="userDao" bean="userDao" />
+    </bean>
+</beans>
